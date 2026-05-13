@@ -1,0 +1,33 @@
+ticket_id,ticket_text,ground_truth,zero_shot_pred,few_shot_pred,role_based_pred,zero_correct,few_correct,role_based_correct
+TS-001,"I returned my shoes two weeks ago via FedEx, but I haven't seen the credit on my statement yet. Tracking says it was delivered.",Refund,Refund,Refund,Refund,True,True,True
+TS-002,I accidentally ordered two of the same blender. Can I get a refund for the duplicate before it ships?,Refund,Refund,Refund,Order Change,True,True,False
+TS-003,"The subscription auto-renewed this morning, but I meant to cancel it. Is it possible to get a refund for this month?",Refund,Refund,Refund,Refund,True,True,True
+TS-004,"Received my order, but the dress is way too small. I’d like to return it for a full refund rather than an exchange.",Refund,Refund,Refund,Refund,True,True,True
+TS-005,My tracking number hasn't updated in five days. It just says 'Label Created.' Is my package lost?,Shipping,Shipping,Shipping,Shipping,True,True,True
+TS-006,"The carrier marked my package as 'Delivered' at 4:00 PM, but I’ve checked my porch and mailbox and there's nothing here.",Shipping,Shipping,Shipping,Shipping,True,True,True
+TS-007,"I paid for overnight shipping, but it’s been three days and the order is still 'Processing.' Can I get my shipping fee back?",Shipping,Refund,Refund,Refund,False,False,False
+TS-008,Can I change my delivery address? I realized I sent it to my old apartment by mistake.,Shipping,Order Change,Order Change,Order Change,False,False,True
+TS-009,"I’m trying to reset my password, but the recovery email never arrives in my inbox or spam folder.",Login,Login,Login,Login,True,True,True
+TS-010,I’ve been locked out of my account after three failed attempts. How long do I have to wait to try again?,Login,Login,Login,Login,True,True,True
+TS-011,"Every time I try to log in, the page just refreshes and takes me back to the home screen without an error message.",Login,Login,Login,Login,True,True,True
+TS-012,I no longer have access to the phone number used for two-factor authentication. How can I verify my identity?,Login,Account,Account,Login,False,False,True
+TS-013,"My credit card was declined, but my bank says the transaction went through on their end. Please check.",Payment,Payment,Payment,Payment,True,True,True
+TS-014,"I’m trying to use a 20% off promo code, but the checkout page says 'Code Not Valid' even though it expires tomorrow.",Payment,Payment,Payment,Payment,True,True,True
+TS-015,Why was I charged twice for Order #8829? There are two identical hits on my bank app.,Payment,Payment,Payment,Payment,True,True,True
+TS-016,Do you accept Apple Pay or PayPal? I don't see the option at checkout.,Payment,Payment,Payment,Payment,True,True,True
+TS-017,I need to change the primary email address associated with my account to my business email.,Account,Account,Account,Account,True,True,True
+TS-018,How do I permanently delete my account and all my saved data?,Account,Account,Account,Account,True,True,True
+TS-019,I can't find my order history from 2023. Are old receipts archived somewhere else?,Account,Account,Account,Account,True,True,True
+TS-020,I’m trying to merge two accounts I created with different emails. Is that possible?,Account,Account,Account,Account,True,True,True
+TS-021,The coffee maker I bought last month has started leaking from the bottom. This seems like a defect.,Product Quality,Product Quality,Product Quality,Product Quality,True,True,True
+TS-022,I opened the box and the ceramic lamp was shattered into pieces. The packaging looked undamaged.,Product Quality,Product Quality,Product Quality,Product Quality,True,True,True
+TS-023,The color of the 'Navy' sofa I received looks much more like a light teal than the photos on your website.,Product Quality,Product Quality,Product Quality,Product Quality,True,True,True
+TS-024,"After just one wash, the stitching on the hem of this shirt has completely come undone.",Product Quality,Product Quality,Product Quality,Product Quality,True,True,True
+TS-025,"I just placed an order five minutes ago, but I realized I selected the wrong size. Can you change it to a Large?",Order Change,Order Change,Order Change,Order Change,True,True,True
+TS-026,I forgot to add the matching pillowcases to my order. Can you add them so I don't have to pay for shipping twice?,Order Change,Order Change,Order Change,Order Change,True,True,True
+TS-027,Please cancel my order #9910. I found a different model I like better.,Order Change,Order Change,Order Change,Order Change,True,True,True
+TS-028,Do you offer any discounts for non-profit organizations or bulk orders for events?,Other,Other,Other,Other,True,True,True
+TS-029,I'm a social media influencer and I'd love to collaborate. Who is the right person to contact about PR?,Other,Other,Other,Other,True,True,True
+TS-030,Is this product BPA-free? I couldn't find that information in the specifications section.,Other,Product Quality,Product Quality,Other,False,False,True
+,,,,,,,,
+,,,,,,26.0,26.0,28.0
