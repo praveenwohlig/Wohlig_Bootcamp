@@ -1,0 +1,61 @@
+input_id,model,latency_ms,input_tokens,output_tokens,cost_usd,quality_score_1to5,notes
+input1,gemini-3.1-pro-preview,12787.76,705,118,0.002826,5,An excellent and well-structured summary that accurately covers all key points.
+input1,gemini-2.5-flash,6607.69,705,102,0.0004665,5,"Excellent and comprehensive summary that accurately covers all the key points, including the benefits and limitations."
+input1,gemini-2.5-flash-lite,862.84,705,76,0.0001009,5,The summary accurately and concisely covers the main applications and ethical considerations mentioned in the text.
+input19,gemini-3.1-pro-preview,12078.45,450,129,0.002448,5,"An excellent summary that accurately and clearly captures the document's main points on impact, challenges, and future requirements."
+input19,gemini-2.5-flash,4751.59,450,96,0.000375,5,Excellent summary that accurately and concisely covers all key points.
+input19,gemini-2.5-flash-lite,650.71,450,105,8.7e-05,5,An excellent and comprehensive summary that accurately captures the document's main points with great clarity.
+input18,gemini-3.1-pro-preview,10070.14,475,135,0.00257,5,"Excellent summary that is accurate, clear, and covers all key points of the original document."
+input18,gemini-2.5-flash,7125.98,475,97,0.000385,5,"A clear, accurate, and comprehensive summary of the original text."
+input18,gemini-2.5-flash-lite,1270.52,475,137,0.0001023,5,"Excellent summary that accurately and completely captures all key aspects of the original document in a clear, concise format."
+input2,gemini-3.1-pro-preview,10903.46,450,129,0.002448,5,Excellent summary that accurately and concisely captures all key points from the original document.
+input2,gemini-2.5-flash,12997.67,450,88,0.000355,5,An excellent summary that accurately and concisely covers all key points of the original document.
+input2,gemini-2.5-flash-lite,1020.89,450,103,8.62e-05,5,The summary accurately captures all the main points of the source document with excellent clarity and completeness.
+input3,gemini-3.1-pro-preview,12621.96,450,124,0.002388,5,Excellent summary that accurately and concisely captures all key points from the source text.
+input3,gemini-2.5-flash,4186.0,450,116,0.000425,5,"The summary is accurate, clear, and completely captures the key arguments of the original document."
+input3,gemini-2.5-flash-lite,1006.73,450,107,8.78e-05,5,"The summary accurately reflects the source document, which seems to incorrectly use the term 'Climate Change' to refer to technology."
+input7,gemini-3.1-pro-preview,11096.37,476,100,0.002152,5,A well-structured and comprehensive summary of the source text's main arguments.
+input7,gemini-2.5-flash,5471.52,476,105,0.0004053,5,Excellent summary that accurately and concisely covers the document's main points.
+input7,gemini-2.5-flash-lite,1288.95,476,112,9.24e-05,5,"An excellent and comprehensive summary that accurately captures all key aspects of the original document in a clear, concise format."
+input6,gemini-3.1-pro-preview,12232.72,450,131,0.002472,5,"The summary is excellent, accurately capturing the main points on impact, challenges, and future needs."
+input6,gemini-2.5-flash,5086.92,450,78,0.00033,5,"A clear, accurate, and comprehensive summary of the original's main arguments."
+input6,gemini-2.5-flash-lite,1109.32,450,98,8.42e-05,5,"Accurately captures all major themes in a clear, concise format."
+input4,gemini-3.1-pro-preview,10472.65,450,126,0.002412,5,Excellent summary that accurately and concisely captures all the key themes from the original document.
+input4,gemini-2.5-flash,6487.79,450,81,0.0003375,5,An excellent summary that accurately and concisely covers all key aspects of the original document.
+input4,gemini-2.5-flash-lite,1254.59,450,135,9.9e-05,5,"An excellent and comprehensive summary that accurately captures all key aspects of the original document in a clear, structured format."
+input20,gemini-3.1-pro-preview,11556.89,450,133,0.002496,5,"The summary is excellent, accurately capturing the document's main points about impact, challenges, and future development."
+input20,gemini-2.5-flash,3538.46,450,110,0.00041,5,Excellent summary that accurately and comprehensively captures the main points of the document.
+input20,gemini-2.5-flash-lite,985.59,450,122,9.38e-05,5,An excellent and comprehensive summary that accurately captures all key themes.
+input5,gemini-3.1-pro-preview,10127.71,437,112,0.002218,5,Excellent summary that accurately captures the document's core themes.
+input5,gemini-2.5-flash,5728.52,438,97,0.0003739,5,A comprehensive and accurate summary that concisely covers the document's key themes.
+input5,gemini-2.5-flash-lite,970.59,438,100,8.38e-05,5,A comprehensive and accurate summary of the main arguments.
+input8,gemini-3.1-pro-preview,10089.34,450,138,0.002556,5,"An excellent summary that accurately and completely captures the main points of the document in a clear, well-structured format."
+input8,gemini-2.5-flash,5836.74,450,100,0.000385,5,Accurately and comprehensively covers all the main points of the original document.
+input8,gemini-2.5-flash-lite,994.85,450,114,9.06e-05,5,Excellent summary that accurately and concisely covers all key aspects.
+input10,gemini-3.1-pro-preview,13829.22,451,148,0.002678,5,"A clear, accurate, and comprehensive summary of the source text."
+input10,gemini-2.5-flash,10239.73,451,99,0.0003828,5,The summary accurately and completely captures the key points of the original document.
+input10,gemini-2.5-flash-lite,1117.91,451,129,9.67e-05,5,Excellent summary that accurately and completely captures all key aspects of the document.
+input11,gemini-3.1-pro-preview,11518.56,450,121,0.002352,5,A well-structured and comprehensive summary of the original text.
+input11,gemini-2.5-flash,4330.6,450,95,0.0003725,5,A well-structured and comprehensive summary of the original text.
+input11,gemini-2.5-flash-lite,1165.06,450,112,8.98e-05,5,"The summary is accurate, clear, and comprehensively covers the document's key points."
+input9,gemini-3.1-pro-preview,11319.45,450,122,0.002364,5,Excellent summary that accurately captures all key points concisely.
+input9,gemini-2.5-flash,6412.1,450,88,0.000355,5,"An excellent summary that accurately and concisely covers the main points, challenges, and future outlook presented in the original text."
+input9,gemini-2.5-flash-lite,920.11,450,88,8.02e-05,5,Effectively distills all the main points of the original text with high accuracy and clarity.
+input13,gemini-3.1-pro-preview,11291.22,437,136,0.002506,5,"Accurately and clearly captures the document's key themes, challenges, and future outlook."
+input13,gemini-2.5-flash,5711.97,437,104,0.0003911,5,A concise and comprehensive summary that accurately captures the main points of the document.
+input13,gemini-2.5-flash-lite,1146.79,437,128,9.49e-05,5,Excellent summary that accurately and concisely covers all key aspects of the original document.
+input12,gemini-3.1-pro-preview,11458.71,437,131,0.002446,5,An excellent and comprehensive summary that accurately captures all the key points of the original document.
+input12,gemini-2.5-flash,5369.82,438,110,0.0004064,5,Excellent summary that accurately and completely captures all key points of the original document with great clarity.
+input12,gemini-2.5-flash-lite,1104.79,438,99,8.34e-05,5,An excellent and comprehensive summary that accurately captures all key aspects of the original text.
+input16,gemini-3.1-pro-preview,11040.79,450,131,0.002472,5,"Excellent summary that accurately covers the document's impact, challenges, and future outlook."
+input16,gemini-2.5-flash,5693.92,450,101,0.0003875,5,"An excellent summary that accurately and concisely covers the document's evolution, challenges, and future outlook."
+input16,gemini-2.5-flash-lite,1091.54,450,103,8.62e-05,5,"The summary is excellent, accurately capturing all key aspects of the original document with great clarity and conciseness."
+input17,gemini-3.1-pro-preview,10691.7,450,123,0.002376,5,An excellent summary that accurately and concisely covers all key aspects of the original text.
+input17,gemini-2.5-flash,6582.76,450,84,0.000345,5,"The summary accurately covers the document's main ideas, challenges, and future outlook."
+input17,gemini-2.5-flash-lite,953.3,450,99,8.46e-05,5,"The summary is accurate, complete, and clearly structured, covering all key aspects of the document."
+input15,gemini-3.1-pro-preview,11279.33,450,110,0.00222,5,An excellent and well-structured summary that accurately covers all key themes.
+input15,gemini-2.5-flash,3519.42,450,112,0.000415,5,Excellent summary. It accurately and completely covers all key points of the original document with great clarity.
+input15,gemini-2.5-flash-lite,1075.53,450,122,9.38e-05,5,An excellent and comprehensive summary that captures all key aspects accurately and clearly.
+input14,gemini-3.1-pro-preview,12438.06,450,146,0.002652,5,"The summary is excellent, accurately capturing all the key themes of the original document in a clear and concise manner."
+input14,gemini-2.5-flash,4489.17,450,113,0.0004175,5,A concise and comprehensive summary that accurately covers the document's main arguments.
+input14,gemini-2.5-flash-lite,976.71,450,116,9.14e-05,5,A concise and accurate summary of the document's key themes.
