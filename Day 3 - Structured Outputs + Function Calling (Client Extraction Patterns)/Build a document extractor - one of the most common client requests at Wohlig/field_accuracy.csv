@@ -1,0 +1,130 @@
+sample_id,field_name,extracted_value,ground_truth_value,exact_match
+invoice_1,invoice_number,INV-2023-9041,INV-2023-9041,TRUE
+invoice_1,invoice_date,2023-10-12,2023-10-12,TRUE
+invoice_1,vendor_name,Global Tech Solutions LLC,Global Tech Solutions LLC,TRUE
+invoice_1,total_amount,26521.25,26521.25,TRUE
+invoice_1,tax_amount,2021.25,2021.25,TRUE
+invoice_1,status,UNPAID,UNPAID,TRUE
+invoice_1,customer_name,Acme Corp,Acme Corp,TRUE
+invoice_1,vendor_address.street,1450 Innovation Drive,1450 Innovation Drive,TRUE
+invoice_1,vendor_address.city,San Jose,San Jose,TRUE
+invoice_1,vendor_address.state,CA,CA,TRUE
+invoice_1,vendor_address.postal_code,95112,95112,TRUE
+invoice_1,line_items[0].description,Enterprise Cloud Hosting (Annual),Enterprise Cloud Hosting (Annual),TRUE
+,,,,
+invoice_2,invoice_number,MM-884920,MM-884920,TRUE
+invoice_2,invoice_date,2024-04-15,2024-04-15,TRUE
+invoice_2,vendor_name,MULLER MANUFACTURING GMBH,MULLER MANUFACTURING GMBH,TRUE
+invoice_2,total_amount,6634.25,6634.25,TRUE
+invoice_2,tax_amount,1059.25,1059.25,TRUE
+invoice_2,status,PAID,PAID,TRUE
+invoice_2,customer_name,Sterling Industrial Partners,Sterling Industrial Partners,TRUE
+invoice_2,vendor_address.street,Industriestrasse 45,Industriestrasse 45,TRUE
+invoice_2,vendor_address.city,Berlin,Berlin,TRUE
+invoice_2,vendor_address.state,Berlin,Berlin,TRUE
+invoice_2,vendor_address.postal_code,10115,10115,TRUE
+invoice_2,line_items[1].description,Sealing Ring Set (Industrial),Sealing Ring Set (Industrial),TRUE
+,,,,
+invoice_3,invoice_number,OE-2024-0099,OE-2024-0099,TRUE
+invoice_3,invoice_date,2024-01-05,2024-01-05,TRUE
+invoice_3,vendor_name,ORIENTAL ELECTRONICS LTD,ORIENTAL ELECTRONICS LTD,TRUE
+invoice_3,total_amount,11718,11718,TRUE
+invoice_3,tax_amount,868,868,TRUE
+invoice_3,status,OVERDUE,OVERDUE,TRUE
+invoice_3,customer_name,TechWave Innovations,TechWave Innovations,TRUE
+invoice_3,vendor_address.street,15 Changi Business Park Central 1,15 Changi Business Park Central 1,TRUE
+invoice_3,vendor_address.city,Singapore,Singapore,TRUE
+invoice_3,vendor_address.state,Singapore,Singapore,TRUE
+invoice_3,vendor_address.postal_code,486057,486057,TRUE
+invoice_3,line_items[2].description,Air Freight Charges,Air Freight Charges,TRUE
+,,,,
+invoice_4,invoice_number,JD-104,JD-104,TRUE
+invoice_4,invoice_date,2023-11-30,2023-11-30,TRUE
+invoice_4,vendor_name,Freelance Consulting Services - Jane Doe,Freelance Consulting Services - Jane Doe,TRUE
+invoice_4,total_amount,4068,4068,TRUE
+invoice_4,tax_amount,468,468,TRUE
+invoice_4,status,UNPAID,UNPAID,TRUE
+invoice_4,customer_name,Marketing Pros Inc.,Marketing Pros Inc.,TRUE
+invoice_4,vendor_address.street,"45 Elm Street, Apt 3B","45 Elm Street, Apt 3B",TRUE
+invoice_4,vendor_address.city,Toronto,Toronto,TRUE
+invoice_4,vendor_address.state,ON,ON,TRUE
+invoice_4,vendor_address.postal_code,M5V 2H1,M5V 2H1,TRUE
+invoice_4,line_items[0].description,Brand strategy workshops,Brand strategy workshops,TRUE
+,,,,
+invoice_5,invoice_number,AL-993-2024,AL-993-2024,TRUE
+invoice_5,invoice_date,2024-02-28,2024-02-28,TRUE
+invoice_5,vendor_name,Apex Logistics & Freight,Apex Logistics & Freight,TRUE
+invoice_5,total_amount,2985.5,2985.5,TRUE
+invoice_5,tax_amount,0,0,TRUE
+invoice_5,status,PAID,PAID,TRUE
+invoice_5,customer_name,National Builders Supply,National Builders Supply,TRUE
+invoice_5,vendor_address.street,7800 Highway 61,7800 Highway 61,TRUE
+invoice_5,vendor_address.city,Memphis,Memphis,TRUE
+invoice_5,vendor_address.state,TN,TN,TRUE
+invoice_5,vendor_address.postal_code,38101,38101,TRUE
+invoice_5,line_items[0].description,FTL Freight Transportation (Trailer #4992),FTL Freight Transportation (Trailer #4992),TRUE
+,,,,
+invoice_6,invoice_number,CCM-2024-001,CCM-2024-001,TRUE
+invoice_6,invoice_date,2024-03-14,2024-03-14,TRUE
+invoice_6,vendor_name,Creative Catalyst Media,Creative Catalyst Media,TRUE
+invoice_6,total_amount,22860.5,22860.5,TRUE
+invoice_6,tax_amount,1320,1320,TRUE
+invoice_6,status,UNPAID,UNPAID,TRUE
+invoice_6,customer_name,Starlight Retail Group,Starlight Retail Group,TRUE
+invoice_6,vendor_address.street,88 Sydney Road,88 Sydney Road,TRUE
+invoice_6,vendor_address.city,Melbourne,Melbourne,TRUE
+invoice_6,vendor_address.state,VIC,VIC,TRUE
+invoice_6,vendor_address.postal_code,3000,3000,TRUE
+invoice_6,line_items[3].description,Platform Ad Spend Reimbursement (Feb),Platform Ad Spend Reimbursement (Feb),TRUE
+,,,,
+invoice_7,invoice_number,109844,109844,TRUE
+invoice_7,invoice_date,2023-08-19,2023-08-19,TRUE
+invoice_7,vendor_name,WOODLANDS TIMBER CO.,WOODLANDS TIMBER CO.,TRUE
+invoice_7,total_amount,8759,8759,TRUE
+invoice_7,tax_amount,0,0,TRUE
+invoice_7,status,PAID,PAID,TRUE
+invoice_7,customer_name,Cascade Home Builders,Cascade Home Builders,TRUE
+invoice_7,vendor_address.street,400 Forest Ave,400 Forest Ave,TRUE
+invoice_7,vendor_address.city,Portland,Portland,TRUE
+invoice_7,vendor_address.state,OR,OR,TRUE
+invoice_7,vendor_address.postal_code,97204,97204,TRUE
+invoice_7,line_items[2].description,3/4 Birch Plywood Sheets,3/4 Birch Plywood Sheets,TRUE
+,,,,
+invoice_8,invoice_number,MP-2024-881A,MP-2024-881A,TRUE
+invoice_8,invoice_date,2024-05-22,2024-05-22,TRUE
+invoice_8,vendor_name,MEDIPRO SUPPLIES AG,MEDIPRO SUPPLIES AG,TRUE
+invoice_8,total_amount,5411.93,5411.93,TRUE
+invoice_8,tax_amount,386.93,386.93,TRUE
+invoice_8,status,OVERDUE,OVERDUE,TRUE
+invoice_8,customer_name,Geneva General Hospital,Geneva General Hospital,TRUE
+invoice_8,vendor_address.street,Zurichstrasse 100,Zurichstrasse 100,TRUE
+invoice_8,vendor_address.city,Zurich,Zurich,TRUE
+invoice_8,vendor_address.state,Zurich,Zurich,TRUE
+invoice_8,vendor_address.postal_code,8000,8000,TRUE
+invoice_8,line_items[1].description,Nitrile Gloves Medium (Box 200),Nitrile Gloves Medium (Box 200),TRUE
+,,,,
+invoice_9,invoice_number,2024-L-0045,2024-L-0045,TRUE
+invoice_9,invoice_date,2024-09-01,2024-09-01,TRUE
+invoice_9,vendor_name,HARRISON & WRIGHT LEGAL COUNSEL,HARRISON & WRIGHT LEGAL COUNSEL,TRUE
+invoice_9,total_amount,49125,49125,TRUE
+invoice_9,tax_amount,0,0,TRUE
+invoice_9,status,UNPAID,UNPAID,TRUE
+invoice_9,customer_name,Horizon Ventures LLC,Horizon Ventures LLC,TRUE
+invoice_9,vendor_address.street,1200 Avenue of the Americas,1200 Avenue of the Americas,TRUE
+invoice_9,vendor_address.city,New York,New York,TRUE
+invoice_9,vendor_address.state,NY,NY,TRUE
+invoice_9,vendor_address.postal_code,10036,10036,TRUE
+invoice_9,line_items[0].description,Merger & Acquisition Advisory,Merger & Acquisition Advisory,TRUE
+,,,,
+invoice_10,invoice_number,C9-8817263,C9-8817263,TRUE
+invoice_10,invoice_date,2023-12-01,2023-12-01,TRUE
+invoice_10,vendor_name,Cloud9 Infrastructures,Cloud9 Infrastructures,TRUE
+invoice_10,total_amount,3789.96,3789.96,TRUE
+invoice_10,tax_amount,352.35,352.35,TRUE
+invoice_10,status,UNPAID,UNPAID,TRUE
+invoice_10,customer_name,DataMiners Inc.,DataMiners Inc.,TRUE
+invoice_10,vendor_address.street,880 Bit Way,880 Bit Way,TRUE
+invoice_10,vendor_address.city,Seattle,Seattle,TRUE
+invoice_10,vendor_address.state,WA,WA,TRUE
+invoice_10,vendor_address.postal_code,98101,98101,TRUE
+invoice_10,line_items[0].description,Load Balancer,Load Balancer,TRUE
