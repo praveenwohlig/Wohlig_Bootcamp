@@ -1,6 +1,5 @@
-brief_1,0,False,"Failed to parse judge response | Missing sections: Role, Context, Task, Constraints, Format, Examples"
-brief_1,0,False,Failed to parse judge response
-brief_1,0,False,Failed to parse judge response
-brief_1,0,False,Failed to parse judge response
-brief_1,0,False,Failed to parse judge response
-brief_1,0,False,Failed to parse judge response
+breif_id,generated_prompt_quality_1to5,has_all_6_sections,what_was_missing
+brief_1_extract_pdfs,5,TRUE,None
+brief_2_support_email_classifier,5,TRUE,None
+brief_3_write_product_description,5,TRUE,None
+breif_4_summarize_legal_documuments,5,TRUE,None
