@@ -1,0 +1,5 @@
+gemini-flash
+pyproject.toml
+uv.lock
+.venv
+main.py
