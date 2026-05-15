@@ -1,0 +1,6 @@
+Think step by step before answering.
+
+Scenario:
+{scenario}
+
+Finally answer only Yes or No

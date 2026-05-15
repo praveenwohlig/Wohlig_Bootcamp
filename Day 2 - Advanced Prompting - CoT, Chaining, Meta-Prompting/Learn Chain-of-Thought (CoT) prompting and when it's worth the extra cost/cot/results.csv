@@ -1,0 +1,182 @@
+scenario_id,direct_answer,direct_correct,cot_answer,cot_correct,sc_answer,sc_correct,direct_cost_usd,cot_cost_usd,sc_cost_usd
+1,No,True,"Step 1: Identify the active duration of the customer's policy, which is 40 days.
+Step 2: Identify the waiting period required for hospitalization claims under the Health Basic policy, which is 60 days.
+Step 3: Compare the active duration to the waiting period. The policy has only been active for 40 days, which is less than the required 60 days.
+Step 4: Determine if the claim is eligible. Since the waiting period has not been completed, the hospitalization expenses are not covered.
+
+No",True,"Step 1: Identify the condition for hospitalization claims under the Health Basic policy, which is a 60-day waiting period.
+Step 2: Determine how long the customer's policy has been active. The policy has been active for 40 days.
+Step 3: Compare the active duration to the required waiting period. 40 days is less than the 60 days required.
+Step 4: Conclude whether the claim is eligible. Since the waiting period has not been completed, the hospitalization claim is not valid and will be rejected.
+
+No",True,1.575e-05,0.0001386,0.00068355
+2,Yes,True,"Step 1: Identify the waiting period required for emergency surgeries under the policy, which is 60 days.
+Step 2: Determine how long the customer's policy has been active, which is 120 days.
+Step 3: Compare the active duration to the waiting period. Since 120 days is greater than the 60-day waiting period, the condition for coverage has been met.
+Step 4: Conclude that the emergency surgery expenses are covered.
+
+Yes",True,"Step 1: Identify the active duration of the customer's policy. The policy has been active for 120 days.
+Step 2: Identify the waiting period required for the specific claim. The waiting period for emergency surgeries is 60 days.
+Step 3: Compare the active duration to the waiting period. Since 120 days is greater than the 60-day waiting period, the condition for coverage has been met.
+Step 4: Determine if the expenses are covered based on this comparison.
+
+Yes",True,1.61e-05,0.00012845,0.00043435
+3,No,True,"Step 1: Identify the status of the customer's insurance policy. The scenario states the policy expired last month.
+Step 2: Identify the date of the incident. The accident occurred yesterday.
+Step 3: Determine if the policy was active at the time of the incident. Since the policy expired last month and the accident happened yesterday, the customer did not have active coverage at the time of the accident.
+Step 4: Conclude whether the claim for accident repair costs is valid or covered under the expired policy. It is not.
+
+No",True,"Step 1: Identify the customer's active policy and specific coverage. The customer has a Vehicle Premium policy with active collision coverage.
+Step 2: Understand the purpose of the active coverage. Collision coverage specifically pays for repair costs to the insured's vehicle when it is damaged in a crash/accident with another vehicle or object.
+Step 3: Evaluate the customer's claim. The customer is claiming repair costs resulting from an accident.
+Step 4: Determine if the claim falls under the active coverage. Since the claim is for accident-related repairs and collision coverage is active, the claim is valid and covered.
+
+Yes",True,1.295e-05,0.00013475,0.00071995
+4,Yes,True,"Step 1: Identify the customer's policy and active coverages. The customer has a Vehicle Premium policy with active collision coverage.
+Step 2: Identify the nature of the claim. The customer is claiming repair costs resulting from an accident.
+Step 3: Determine if the active coverage applies to the claim. Collision coverage specifically pays for damage/repair costs to the insured vehicle caused by a collision/accident. 
+Step 4: Conclude whether the claim is covered. Since the collision coverage is active and matches the scenario of an accident requiring repairs, the claim is covered.
+
+Yes",True,"Step 1: Identify the customer's active policy and specific coverage. The customer has a Vehicle Premium policy with active collision coverage.
+Step 2: Understand the purpose of the active coverage. Collision coverage specifically pays for repair costs to the insured's vehicle when it is damaged in a crash/accident with another vehicle or object.
+Step 3: Evaluate the customer's claim. The customer is claiming repair costs resulting from an accident.
+Step 4: Determine if the claim falls under the active coverage. Since the claim is for accident-related repairs and collision coverage is active, the claim is valid and covered.
+
+Yes",True,1.155e-05,0.00014175,0.00078225
+5,Yes,True,"Step 1: Identify the active policy and the incident. The customer has a Travel Shield policy and experienced lost baggage.
+Step 2: Verify if the trip itself is eligible. The scenario explicitly states the incident occurred during a ""covered international trip.""
+Step 3: Verify if the specific type of loss is covered under the policy. The scenario explicitly states ""Baggage loss is included in coverage.""
+Step 4: Conclude whether the incident is covered based on the provided facts. Since the trip is covered and the specific incident (baggage loss) is included in the policy, the claim is covered.
+
+Yes",True,"Step 1: Identify the active policy and the incident. The customer holds a Travel Shield policy and experienced lost baggage.
+Step 2: Verify the trip's eligibility. The scenario states the incident occurred during a ""covered international trip,"" meaning the trip itself is valid under the policy.
+Step 3: Verify if the specific incident is a covered peril. The scenario explicitly states that ""baggage loss is included in coverage.""
+Step 4: Evaluate the overall claim eligibility. Since the trip is covered and the specific incident (lost baggage) is included in the coverage, the customer's claim is valid and covered.
+
+Yes",True,1.225e-05,0.00014875,0.0007238
+6,No,True,"Step 1: Identify the reason for the trip cancellation. The customer cancelled due to ""personal preference.""
+Step 2: Classify the type of cancellation. Cancelling a trip based on personal preference is considered a ""voluntary"" cancellation.
+Step 3: Review the policy conditions. The Travel Shield policy explicitly states that ""voluntary trip cancellations are excluded.""
+Step 4: Determine coverage. Since the customer's reason for cancellation falls directly under the policy's exclusions, the claim is not covered.
+
+No",True,"Step 1: Analyze the reason for the trip cancellation. The customer cancelled based on ""personal preference.""
+Step 2: Classify the cancellation type. Cancelling a trip due to personal preference is considered a voluntary cancellation.
+Step 3: Evaluate the policy conditions. The scenario explicitly states that ""Voluntary trip cancellations are excluded"" under the Travel Shield policy.
+Step 4: Determine coverage. Since the cancellation is voluntary, it falls under the policy's exclusions and is therefore not covered.
+
+No",True,1.155e-05,0.00012495,0.0007161
+7,No,True,"Step 1: Identify the customer's policy and the type of claim being made. The customer has a Home Protect policy and is claiming flood damage.
+Step 2: Identify the specific requirements for flood coverage under this policy. The policy requires an additional flood rider to cover flood damage.
+Step 3: Check if the customer meets the requirement. The scenario states the customer did not purchase the additional flood rider.
+Step 4: Determine if the claim is covered based on the findings. Since the required rider was not purchased, the flood damage is not covered.
+
+No",True,"Step 1: Identify the type of damage being claimed (flood damage).
+Step 2: Identify the policy requirements for this specific type of damage (flood coverage requires an additional flood rider).
+Step 3: Evaluate the customer's policy to see if the requirement is met (the customer did not purchase the flood rider).
+Step 4: Determine the outcome of the claim based on the lack of required coverage (the claim for flood damage is not covered and should be denied).
+
+No",True,1.365e-05,0.00013965,0.00067935
+8,Yes,True,"Step 1: Identify the customer's base policy and any additional coverages. The customer has a ""Home Protect Plus"" policy and an ""active flood rider.""
+Step 2: Identify the nature of the claim being filed. The customer is claiming ""flood damage repair costs.""
+Step 3: Compare the claim to the active coverages. A flood rider specifically adds coverage for flood-related damages to a standard home insurance policy. 
+Step 4: Determine if the claim is covered. Since the flood rider is active and the damage is specifically from a flood, the repair costs are covered under this policy.
+
+Yes",True,"Step 1: Identify the customer's current policy and active coverages. The customer holds a Home Protect Plus policy and has specifically added an active flood rider.
+Step 2: Identify the nature of the customer's claim. The customer is claiming costs associated with flood damage repairs.
+Step 3: Compare the claim to the active coverage. Since the customer has an active flood rider, damage caused by flooding is explicitly covered under their policy.
+Step 4: Determine the outcome. The claim for flood damage repair costs is valid and covered.
+
+Yes",True,1.12e-05,0.00014875,0.0007028
+9,No,True,"Step 1: Identify the customer's policy type, which is ""Health Basic"".
+Step 2: Identify the nature of the claim, which is for ""dental surgery expenses"".
+Step 3: Review the policy rules and exclusions provided in the scenario. It explicitly states that ""Dental procedures are excluded from the policy.""
+Step 4: Evaluate the claim against the exclusions. Since dental surgery is a dental procedure, it falls directly under the policy's exclusions.
+Step 5: Determine if the claim is covered/payable based on this information. Because it is excluded, the claim cannot be approved.
+
+No",True,"Step 1: Identify the customer's policy type, which is a Health Basic policy.
+Step 2: Identify the nature of the customer's claim, which is for dental surgery expenses.
+Step 3: Review the policy's coverage rules and exclusions. The scenario explicitly states that dental procedures are excluded from this policy.
+Step 4: Evaluate the claim against the exclusions. Since dental surgery is a dental procedure, it falls under the exclusion.
+Step 5: Determine if the claim is covered/approved based on this information. Because of the exclusion, the claim cannot be covered.
+
+No",True,1.155e-05,0.00014805,0.0007161
+10,Yes,True,"Step 1: Identify the customer's policy type, which is a Health Premium policy.
+Step 2: Identify the type of claim being made, which is for emergency hospitalization expenses.
+Step 3: Check the policy coverage details provided in the scenario. The scenario explicitly states that ""Emergency hospitalization is covered under the policy.""
+Step 4: Since the claimed expense matches a covered benefit under the active policy, the claim is valid and should be approved.
+
+Yes",True,"Step 1: Identify the policy type held by the customer, which is a Health Premium policy.
+Step 2: Identify the type of claim being made, which is for emergency hospitalization expenses.
+Step 3: Check the coverage details provided in the scenario. It explicitly states that emergency hospitalization is covered under the policy.
+Step 4: Conclude whether the claim is covered based on the alignment between the claim type and the policy coverage. Since they match perfectly, the claim is covered.
+
+Yes",True,1.155e-05,0.0001155,0.00061635
+11,Yes,True,"Step 1: Identify the policy type and the nature of the claim. The customer holds a Vehicle Standard policy and is claiming vehicle theft.
+Step 2: Identify the requirements for this specific claim under the policy. The policy requires a police report to be submitted for a vehicle theft claim.
+Step 3: Evaluate the customer's actions against the requirements. The scenario states that the customer successfully submitted the police report as required.
+Step 4: Determine if the conditions for the claim have been met based on the provided information. Since the required documentation was provided, the conditions are satisfied.
+
+Yes",True,"**Step-by-step thinking:**
+
+1. **Analyze the Policy and Claim:** The customer holds a Vehicle Standard policy and is filing a claim for vehicle theft. 
+2. **Identify the Requirements:** For a vehicle theft claim, standard insurance procedures (and the specific policy mentioned in the scenario) require a police report to be filed and submitted.
+3. **Verify Compliance:** The scenario explicitly states that ""A police report was submitted as required by the policy."" 
+4. **Determine the Outcome:** Since the customer has the appropriate policy and has met the stated requirement for claiming a theft (submitting the police report), the conditions for the claim as presented in the scenario are satisfied. Assuming the implied question is whether the claim meets the stated requirements to proceed or be covered, the answer is affirmative.
+
+**Yes**",True,1.225e-05,0.0001435,0.00078365
+12,No,True,"**Step-by-step thinking:**
+
+1. **Analyze the policy and claim:** The customer holds a Vehicle Standard policy and is filing a claim for vehicle theft.
+2. **Identify the requirements:** The scenario explicitly states that submitting a police report is a mandatory requirement for this type of claim.
+3. **Evaluate the customer's action:** The customer failed to submit the required police report.
+4. **Determine the outcome:** Since a mandatory condition for the claim was not met, the claim cannot be approved or processed successfully. 
+
+No",True,"Step 1: Analyze the policy and the type of claim. The customer has a Vehicle Standard policy and is filing a claim for vehicle theft.
+Step 2: Identify the mandatory requirements for this specific claim. The scenario states that submitting a police report is mandatory for a theft claim.
+Step 3: Evaluate the customer's actions against the requirements. The customer failed to submit the required police report.
+Step 4: Determine the outcome. Since the customer did not fulfill a mandatory condition of the policy, the claim cannot be approved or processed. 
+
+No",True,1.295e-05,0.0001337,0.00063805
+13,Yes,True,"Step 1: Identify the type of policy and the nature of the claim. The policy is a life insurance policy (""Life Secure""), and the beneficiary is claiming death benefits, which is the primary coverage provided by this type of policy.
+
+Step 2: Evaluate the policy's status. The scenario explicitly states that the policy is ""fully active"" and that ""premiums were paid."" This means there are no lapses in coverage.
+
+Step 3: Consider the duration of the policy. The policy has been active for 5 years. This is well past the standard two-year contestability period found in most life insurance policies, meaning the insurance company generally cannot deny the claim based on errors made during the initial application.
+
+Step 4: Determine the validity of the claim. Since the policy is active, in good standing, past the contestability period, and the insured event (death) has occurred, the beneficiary is legally entitled to receive the death benefits. 
+
+Yes",True,"Step 1: Identify the purpose of the policy. A ""Life Secure"" policy is a life insurance policy designed to pay out a death benefit to a beneficiary upon the passing of the insured.
+
+Step 2: Evaluate the status of the policy. The scenario explicitly states that the policy is ""fully active"" and ""premiums were paid."" This means the contract is in good standing and has not lapsed.
+
+Step 3: Consider the duration of the policy. The policy has been active for 5 years. This is well past the standard 2-year contestability period found in most life insurance policies, meaning the insurer generally cannot deny the claim based on typical application discrepancies. 
+
+Step 4: Determine the validity of the claim. Since the insured has passed away, the policy is active, premiums are up to date, and the contestability period has passed, the beneficiary has a valid and legitimate claim to receive the death benefits.
+
+Yes",True,1.435e-05,0.0002254,0.0010409
+14,No,True,"Step 1: Identify the status of the policy. The premium payments were missed for 6 months, which is well beyond the standard 30-31 day grace period, resulting in the policy lapsing.
+Step 2: Understand the definition of a lapsed policy. When a life insurance policy lapses due to non-payment, the coverage is terminated and the insurance company is no longer obligated to pay out benefits.
+Step 3: Evaluate the timing of the claim. The death benefit claim was submitted (and the event occurred) during the period when the policy was already lapsed and inactive.
+Step 4: Determine the outcome. Because there was no active coverage at the time of the event, the insurance company will not pay the death benefit. 
+
+No",True,"**Step-by-step thinking:**
+
+1. **Identify Policy Status:** The scenario states that the customer missed premium payments for 6 months, which resulted in the ""Life Secure"" policy lapsing. 
+2. **Evaluate Grace Periods:** Standard life insurance policies typically have a grace period of 30 to 31 days for missed payments. Since 6 months have passed, the policy is well beyond the grace period and is officially inactive.
+3. **Assess Claim Validity:** For a death benefit claim to be approved and paid, the life insurance policy must be active and in force at the time of the insured's death. 
+4. **Determine the Outcome:** Because the policy had lapsed and coverage was terminated prior to the claim event, the insurance company is not obligated to pay the death benefit. The claim will be denied.
+
+**No**",True,1.54e-05,0.00018235,0.0009968
+15,Yes,True,"Step 1: Identify the customer's policy type, which is a Travel Premium policy.
+Step 2: Identify the nature of the claim, which is for medical emergency expenses incurred abroad.
+Step 3: Review the coverage conditions provided in the scenario. It explicitly states that ""International emergency medical expenses are covered.""
+Step 4: Match the claim to the coverage. Since the medical emergency expenses were incurred abroad, they qualify as international emergency medical expenses.
+Step 5: Conclude whether the claim is covered based on this information. 
+
+Yes",True,"Step 1: Identify the policy type held by the customer, which is a Travel Premium policy.
+Step 2: Identify the specific claim being made, which is for medical emergency expenses incurred abroad.
+Step 3: Review the coverage rules provided in the scenario. It explicitly states that ""International emergency medical expenses are covered.""
+Step 4: Match the claim to the coverage. Since the medical emergency occurred abroad, it qualifies as an international emergency medical expense. 
+Step 5: Conclude whether the claim should be approved based on the provided facts.
+
+Yes",True,1.19e-05,0.00013475,0.00067795
