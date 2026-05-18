@@ -1,0 +1,202 @@
+[
+  {
+    "order_id": "1001",
+    "customer_name": "Rahul Sharma",
+    "product": "Wireless Mouse",
+    "category": "electronics",
+    "price": 899,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-10",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1002",
+    "customer_name": "Ananya Rao",
+    "product": "Running Shoes",
+    "category": "fashion",
+    "price": 2499,
+    "status": "in-transit",
+    "shipping_status": "Expected delivery on 2026-05-20",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1003",
+    "customer_name": "Kiran Patel",
+    "product": "Bluetooth Speaker",
+    "category": "electronics",
+    "price": 3499,
+    "status": "returned",
+    "shipping_status": "Returned to warehouse",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1004",
+    "customer_name": "Sneha Reddy",
+    "product": "Office Chair",
+    "category": "furniture",
+    "price": 7999,
+    "status": "disputed",
+    "shipping_status": "Delivery dispute under review",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1005",
+    "customer_name": "Amit Verma",
+    "product": "Gaming Keyboard",
+    "category": "electronics",
+    "price": 4599,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-11",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1006",
+    "customer_name": "Priya Nair",
+    "product": "Coffee Maker",
+    "category": "home-appliances",
+    "price": 5999,
+    "status": "in-transit",
+    "shipping_status": "Out for delivery",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1007",
+    "customer_name": "Vikram Singh",
+    "product": "Smartphone",
+    "category": "electronics",
+    "price": 24999,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-01",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1008",
+    "customer_name": "Meera Joshi",
+    "product": "Backpack",
+    "category": "fashion",
+    "price": 1299,
+    "status": "returned",
+    "shipping_status": "Refund processed",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1009",
+    "customer_name": "Arjun Das",
+    "product": "Air Fryer",
+    "category": "home-appliances",
+    "price": 6999,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-08",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1010",
+    "customer_name": "Neha Kapoor",
+    "product": "Fitness Band",
+    "category": "electronics",
+    "price": 2999,
+    "status": "in-transit",
+    "shipping_status": "Shipment delayed due to weather",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1011",
+    "customer_name": "Rohit Jain",
+    "product": "Laptop Stand",
+    "category": "office",
+    "price": 1499,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-09",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1012",
+    "customer_name": "Divya Menon",
+    "product": "Table Lamp",
+    "category": "home-decor",
+    "price": 999,
+    "status": "returned",
+    "shipping_status": "Pickup completed",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1013",
+    "customer_name": "Sanjay Kulkarni",
+    "product": "Monitor",
+    "category": "electronics",
+    "price": 15999,
+    "status": "disputed",
+    "shipping_status": "Customer claims damaged delivery",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1014",
+    "customer_name": "Pooja Iyer",
+    "product": "Yoga Mat",
+    "category": "fitness",
+    "price": 799,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-12",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1015",
+    "customer_name": "Manoj Kumar",
+    "product": "Headphones",
+    "category": "electronics",
+    "price": 3999,
+    "status": "in-transit",
+    "shipping_status": "Reached local hub",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1016",
+    "customer_name": "Lavanya Shetty",
+    "product": "Water Bottle",
+    "category": "fitness",
+    "price": 499,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-14",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1017",
+    "customer_name": "Nikhil Rao",
+    "product": "Bookshelf",
+    "category": "furniture",
+    "price": 8999,
+    "status": "returned",
+    "shipping_status": "Awaiting refund approval",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1018",
+    "customer_name": "Shweta Agarwal",
+    "product": "Mixer Grinder",
+    "category": "home-appliances",
+    "price": 4499,
+    "status": "delivered",
+    "shipping_status": "Delivered on 2026-05-13",
+    "refund_eligible": true
+  },
+  {
+    "order_id": "1019",
+    "customer_name": "Harish Bhat",
+    "product": "Jacket",
+    "category": "fashion",
+    "price": 3299,
+    "status": "disputed",
+    "shipping_status": "Wrong item complaint raised",
+    "refund_eligible": false
+  },
+  {
+    "order_id": "1020",
+    "customer_name": "Keerthi Gowda",
+    "product": "Tablet",
+    "category": "electronics",
+    "price": 18999,
+    "status": "in-transit",
+    "shipping_status": "Package departed sorting center",
+    "refund_eligible": false
+  }
+]
