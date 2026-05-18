@@ -1,0 +1,78 @@
+input_id,first_try_valid,final_valid,num_retries,errors_seen,total_cost
+input_01,False,True,1,"1 validation error for ContactCard
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='null', input_type=str]",0.000521
+input_02,False,True,1,"3 validation errors for ContactCard
+email
+  value is not a valid email address: The part after the @-sign contains invalid characters: '@'. [type=value_error, input_value='ravi.kumr@@gmail.com', input_type=str]
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='9876S43210', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+address.pincode
+  Value error, Pincode must contain exactly 6 digits [type=value_error, input_value='500O81', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.00109
+input_03,True,True,0,,0.0013
+input_04,True,True,0,,0.001542
+input_05,False,True,2,"2 validation errors for ContactCard
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='null', input_type=str]
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error | 1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='987654321', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.002181
+input_06,False,True,1,"2 validation errors for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+address.pincode
+  Value error, Pincode must contain exactly 6 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.002699
+input_07,False,True,1,"1 validation error for ContactCard
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='null', input_type=str]",0.003191
+input_08,True,True,0,,0.003438
+input_09,False,True,1,"2 validation errors for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+address.pincode
+  Value error, Pincode must contain exactly 6 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.003835
+input_10,False,True,1,"1 validation error for ContactCard
+email
+  value is not a valid email address: The part after the @-sign is not valid. It should have a period. [type=value_error, input_value='lakshmi.nair@company', input_type=str]",0.00425
+input_11,False,True,1,"1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.004653
+input_12,False,True,1,"1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.005151
+input_13,True,True,0,,0.005398
+input_14,False,True,2,"1 validation error for ContactCard
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='null', input_type=str] | 1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='+91 9876543210', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.006188
+input_15,True,True,0,,0.006438
+input_16,True,True,0,,0.006636
+input_17,False,True,2,"1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error | 1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='98765A3210', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.007269
+input_18,True,True,0,,0.007508
+input_19,True,True,0,,0.007757
+input_20,False,True,2,"1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='null', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error | 1 validation error for ContactCard
+phone
+  Value error, Phone number must contain exactly 10 digits [type=value_error, input_value='9876543', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",0.008562
