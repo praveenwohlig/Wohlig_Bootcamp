@@ -1,5 +1,34 @@
-{
-  "variant_1": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines. The product presents a premium, aspirational, modern, and minimal tone. The background colors are warm and neutral. No prohibited elements are present, and the environment is clean. The product is clearly visible with a luxury commercial aesthetic, consistent lighting, and cinematic photography style with soft shadows and shallow depth of field.\",\n    \"violations\": []\n}\n```",
-  "variant_2": "```json\n{\n    \"status\": \"FAIL\",\n    \"reasoning\": \"The image largely aligns with brand guidelines, but the numerous scattered light effects throughout the frame detract from the 'Minimal' brand tone and compromise 'Clean composition' specified in the photography style.\",\n    \"violations\": [\n        \"Brand Tone: Minimal\",\n        \"Photography Style: Clean composition\"\n    ]\n}\n```",
-  "variant_3": "```json\n{\n    \"status\": \"FAIL\",\n    \"reasoning\": \"The image fails brand compliance primarily due to the background environment and its color palette. The vibrant neon city background, while cinematic, is visually busy and contradicts the brand's 'Minimal' tone. Additionally, the prominent neon pink/purple and blue/green background colors are not among the allowed colors (Black, White, Warm beige, Soft gray), and the visually crowded cityscape conflicts with the prohibition against 'Crowded messy environments' when interpreted in the context of a minimal aesthetic.\",\n    \"violations\": [\n        \"Brand Tone: Minimal (The background is visually busy with a futuristic, neon-lit city, which is not minimal.)\",\n        \"Allowed Background Colors: Background features prominent neon pink/purple and blue/green, which are not listed in the allowed colors.\",\n        \"Prohibited Elements: Crowded messy environments (The background, while styled, is a visually crowded city scene that conflicts with the minimal brand tone.)\"\n    ]\n}\n```"
-}
+[
+  {
+    "variant": "variant_1.jpg",
+    "validation": {
+      "pass": true,
+      "score": 92,
+      "violations": [],
+      "reasoning": "The image successfully captures a premium, aspirational, and modern tone. The product is clearly visible, presented with a luxury commercial aesthetic, cinematic lighting, and a clean composition with shallow depth of field. The background prominently features warm beige, and no prohibited elements are present. The overall quality is high, reflecting brand standards for luxury advertising."
+    }
+  },
+  {
+    "variant": "variant_2.jpg",
+    "validation": {
+      "pass": true,
+      "score": 90,
+      "violations": [
+        "Brand Tone: The prominent background elements, including blurred roses, glitter, and heart shapes, deviate from the specified 'Minimal' aspect of the brand tone."
+      ],
+      "reasoning": "The advertisement image successfully conveys a premium and aspirational brand tone with excellent product visibility, cinematic lighting, and high-quality presentation. While the primary background color is compliant, the inclusion of blurred floral elements, glitter, and hearts slightly detracts from the 'Minimal' tone guideline. However, it still maintains a strong luxury commercial aesthetic and meets other key compliance standards."
+    }
+  },
+  {
+    "variant": "variant_3.jpg",
+    "validation": {
+      "pass": false,
+      "score": 75,
+      "violations": [
+        "Background color (pink/rose gold) is not one of the allowed colors (Black, White, Warm beige, Soft gray).",
+        "The overall composition, while premium and aspirational, deviates from the 'minimal' brand tone due to the abundance of decorative elements (roses, petals, hanging ornaments, snowflakes, fairy lights)."
+      ],
+      "reasoning": "The advertisement image demonstrates high premium quality, excellent product presentation, cinematic photography, and clean composition. However, the background color does not adhere to the specified brand palette. Additionally, while visually appealing, the numerous decorative elements slightly contradict the 'minimal' aspect of the brand tone."
+    }
+  }
+]

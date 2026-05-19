@@ -1,0 +1,40 @@
+You are a premium commercial product photographer and advertising creative director.
+
+Create a high-quality advertising image for:
+
+Product:
+Smart Kitchen Blender
+
+Desired Mood:
+healthy modern lifestyle + minimal premium studio aesthetic
+
+Desired Background:
+bright modern kitchen with natural sunlight
+
+Season:
+spring
+
+Target Audience:
+health-conscious families
+
+Creative Direction:
+- Ultra photorealistic
+- Premium commercial lighting
+- Cinematic composition
+- Luxury advertising quality
+- Modern brand-safe aesthetic
+- High detail product rendering
+- Natural reflections and shadows
+
+Important Rules:
+- Preserve exact product structure
+- Do not distort product shape
+- Keep logo and branding intact
+- No watermark
+- No text overlay
+- No extra products
+- No prohibited objects
+- Maintain clean premium composition
+
+Output Style:
+Professional product campaign photographys

@@ -1,5 +1,33 @@
-{
-  "variant_1": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines, showcasing a premium, aspirational, modern, and minimal aesthetic. The background color is black, which is allowed. No prohibited elements are present, and the product is clearly visible with a luxury commercial aesthetic and consistent lighting. The photography style features cinematic lighting, clean composition, soft shadows, and shallow depth of field.\",\n    \"violations\": []\n}\n```",
-  "variant_2": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines. The tone is premium, aspirational, modern, and minimal. The background is black, which is an allowed color. No prohibited elements are present. The product is clearly visible, with a luxury commercial aesthetic and consistent lighting. The photography style exhibits cinematic lighting, clean composition, soft shadows, and shallow depth of field.\",\n    \"violations\": []\n}\n```",
-  "variant_3": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines. It presents a luxury watch with a premium, aspirational, modern, and minimal tone against an allowed black background. There are no prohibited elements, and the product is clearly visible with a luxury commercial aesthetic, consistent lighting, cinematic style, clean composition, soft shadows, and shallow depth of field.\",\n    \"violations\": []\n}\n```"
-}
+[
+  {
+    "variant": "variant_1.jpg",
+    "validation": {
+      "pass": true,
+      "score": 95,
+      "violations": [],
+      "reasoning": "The advertisement image flawlessly aligns with the brand's premium, aspirational, modern, and minimal tone. It utilizes an allowed black background with cinematic lighting and a shallow depth of field, enhancing the luxury commercial aesthetic. The product is clearly visible, free from distortion, and presented with high lighting consistency and cleanliness. No prohibited elements are present, ensuring commercial safety."
+    }
+  },
+  {
+    "variant": "variant_2.jpg",
+    "validation": {
+      "pass": true,
+      "score": 85,
+      "violations": [
+        "No brand logo is visible on the watch face, which is critical for product identification and brand association in premium advertising."
+      ],
+      "reasoning": "The image adheres to premium luxury branding aesthetics, featuring a clean composition, cinematic lighting, and a well-rendered product against an approved background. However, the absence of a visible brand logo on the watch itself is a significant compliance issue for brand identification."
+    }
+  },
+  {
+    "variant": "variant_3.jpg",
+    "validation": {
+      "pass": false,
+      "score": 75,
+      "violations": [
+        "Brand logo not visible"
+      ],
+      "reasoning": "The advertisement image successfully conveys a premium and aspirational brand tone, utilizing allowed background colors (black with elegant bokeh) and adhering to high-quality product presentation and photography standards, including cinematic lighting, clean composition, and shallow depth of field. It is clean and commercially safe. However, a significant brand compliance concern is the complete absence of a visible brand logo, which is crucial for brand identification in an advertisement."
+    }
+  }
+]

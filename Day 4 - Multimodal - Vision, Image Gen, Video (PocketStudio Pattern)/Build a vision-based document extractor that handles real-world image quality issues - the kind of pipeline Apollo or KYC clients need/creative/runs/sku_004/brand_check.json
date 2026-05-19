@@ -1,5 +1,35 @@
-{
-  "variant_1": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all specified brand guidelines. It conveys a premium, aspirational, modern, and minimal tone. The background colors (black, dark gray) are allowed, and no prohibited elements are present. Product presentation is excellent with clear visibility, no excessive blur, luxury aesthetic, and consistent lighting. The photography style features cinematic lighting, clean composition, soft shadows, and shallow depth of field, all aligning with the guidelines.\",\n    \"violations\": []\n}\n```",
-  "variant_2": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines. The tone is premium, aspirational, modern, and minimal. The dark background colors are within the allowed range. No prohibited elements are present. The product is clearly visible with a luxury commercial aesthetic, consistent lighting, and cinematic photography style.\",\n    \"violations\": []\n}\n```",
-  "variant_3": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines. The tone is premium, aspirational, modern, and minimal. The background is black, which is an allowed color. There are no prohibited elements. The product is clearly visible with a luxury commercial aesthetic, consistent lighting, and cinematic photography style with soft shadows and shallow depth of field.\",\n    \"violations\": []\n}\n```"
-}
+[
+  {
+    "variant": "variant_1.jpg",
+    "validation": {
+      "pass": true,
+      "score": 88,
+      "violations": [
+        "The busy futuristic background, featuring multiple neon lines, snowflakes, and ice elements, deviates from the 'Minimal' brand tone.",
+        "The complex background composition, while stylized, conflicts with the 'Clean composition' guideline for photography style."
+      ],
+      "reasoning": "The image effectively presents the product with premium quality, excellent visibility, and cinematic lighting, aligning with aspirational and modern tones. However, the visually complex background elements and composition detract from the 'Minimal' brand tone and 'Clean composition' guideline."
+    }
+  },
+  {
+    "variant": "variant_2.jpg",
+    "validation": {
+      "pass": true,
+      "score": 95,
+      "violations": [],
+      "reasoning": "The advertisement image successfully adheres to the brand guidelines, presenting a premium, modern, and aspirational tone. The product is clearly visible, undistorped, and showcases a luxury commercial aesthetic with cinematic lighting and a clean composition. The dark background color aligns with allowed palettes, and there are no prohibited elements present."
+    }
+  },
+  {
+    "variant": "variant_3.jpg",
+    "validation": {
+      "pass": false,
+      "score": 67,
+      "violations": [
+        "Logo Visibility: The brand logo is not visible on the product or within the advertisement image, which is crucial for brand identification.",
+        "Allowed Background Colors: The dominant background color is a cool blue-gray, which deviates from the explicitly allowed background colors (Black, White, Warm beige, Soft gray)."
+      ],
+      "reasoning": "The image demonstrates a strong premium, aspirational, and modern tone with excellent product presentation, cinematic lighting, and overall high advertising quality. However, it fails compliance due to the critical absence of a visible brand logo and a deviation in background color from the approved palette."
+    }
+  }
+]

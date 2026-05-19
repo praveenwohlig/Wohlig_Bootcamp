@@ -1,13 +1,12 @@
 import os
 import json
-import csv
-import time
 import uuid
+import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
-
 from google import genai
 from google.genai import types
+from google.cloud import storage
 
 # =========================================================
 # LOAD ENV
@@ -15,11 +14,29 @@ from google.genai import types
 
 load_dotenv()
 
-PROJECT_ID = os.getenv("PROJECT_ID", "")
+PROJECT_ID = os.getenv("PROJECT_ID")
 LOCATION = os.getenv("LOCATION", "us-central1")
+BUCKET_NAME = os.getenv("BUCKET_NAME","")
 
 # =========================================================
-# CLIENT
+# COST CONFIG (REALISTIC ESTIMATE)
+# =========================================================
+
+GEN_COST_PER_IMAGE = 0.039
+BRAND_CHECK_COST = 0.0015
+
+# =========================================================
+# STYLE VARIATIONS
+# =========================================================
+
+STYLE_VARIATIONS = [
+    "luxury festive cinematic lighting",
+    "minimal premium studio aesthetic",
+    "winter luxury commercial campaign"
+]
+
+# =========================================================
+# CLIENTS
 # =========================================================
 
 client = genai.Client(
@@ -28,129 +45,94 @@ client = genai.Client(
     location=LOCATION
 )
 
-# =========================================================
-# PATHS
-# =========================================================
-
-BASE_DIR = Path(__file__).resolve().parent
-
-PRODUCTS_DIR = BASE_DIR / "products"
-RUNS_DIR = BASE_DIR / "runs"
-PROMPTS_DIR = BASE_DIR / "prompts"
-
-RUNS_DIR.mkdir(exist_ok=True)
-
-BRAND_GUIDELINES_PATH = BASE_DIR / "brand_guidelines.md"
-
-# =========================================================
-# LOAD BRAND GUIDELINES
-# =========================================================
-
-with open(BRAND_GUIDELINES_PATH, "r") as file:
-    BRAND_GUIDELINES = file.read()
-
-# =========================================================
-# STYLE VARIATIONS
-# =========================================================
-
-STYLE_VARIATIONS = [
-    "luxury studio lighting with warm golden tones",
-    "festive premium commercial aesthetic with glowing lights",
-    "futuristic neon cyberpunk advertisement style"
-]
-
-# =========================================================
-# COST SETTINGS (FAKE ESTIMATES)
-# =========================================================
-
-IMAGE_GEN_COST = 0.04
-BRAND_CHECK_COST = 0.002
+storage_client = storage.Client()
+bucket = storage_client.bucket(BUCKET_NAME)
 
 # =========================================================
 # HELPERS
 # =========================================================
 
-def load_brief(brief_path):
-    with open(brief_path, "r") as file:
-        return json.load(file)
+def read_file(path):
+    with open(path, "r") as f:
+        return f.read()
 
+def save_json(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
 
-def generate_prompt(product, mood, background, variation):
-    return f"""
-    Product advertisement photography for {product}.
+def upload_to_gcs(local_path, gcs_path):
 
-    Mood:
-    {mood}
+    blob = bucket.blob(gcs_path)
+    blob.upload_from_filename(local_path)
 
-    Background:
-    {background}
+    print(f"Uploaded -> gs://{BUCKET_NAME}/{gcs_path}")
 
-    Style Variation:
-    {variation}
+# =========================================================
+# IMAGE GENERATION
+# =========================================================
 
-    Cinematic lighting.
-    Premium commercial aesthetic.
-    Product centered and clearly visible.
-    High detail.
-    Clean composition.
-    """
+def generate_image(
+    input_image_path,
+    final_prompt,
+    output_path
+):
 
-
-def generate_variant(image_path, prompt, output_path):
-
-    with open(image_path, "rb") as img:
-        image_bytes = img.read()
+    with open(input_image_path, "rb") as f:
+        image_bytes = f.read()
 
     response = client.models.generate_content(
         model="gemini-2.5-flash-image",
         contents=[
-            types.Part.from_text(text=prompt),
+            final_prompt,
             types.Part.from_bytes(
                 data=image_bytes,
                 mime_type="image/jpeg"
             )
         ],
         config=types.GenerateContentConfig(
-            response_modalities=["IMAGE"]
+            temperature=0.8
         )
     )
 
-    image_data = None
+    saved = False
 
     for part in response.candidates[0].content.parts:
-        if part.inline_data:
-            image_data = part.inline_data.data
 
-    if image_data is None:
+        if hasattr(part, "inline_data") and part.inline_data:
+
+            with open(output_path, "wb") as f:
+                f.write(part.inline_data.data)
+
+            saved = True
+            break
+
+    if not saved:
         raise Exception("No image generated")
 
-    with open(output_path, "wb") as f:
-        f.write(image_data)
+# =========================================================
+# BRAND VALIDATION
+# =========================================================
 
-def brand_check(image_path):
+def validate_brand(
+    image_path,
+    guidelines,
+    brand_prompt
+):
 
-    with open(image_path, "rb") as img:
-        image_bytes = img.read()
+    with open(image_path, "rb") as f:
+        image_bytes = f.read()
 
-    prompt = f"""
-    You are a brand compliance checker.
+    final_prompt = f"""
+{brand_prompt}
 
-    Analyze the image against these brand guidelines:
-
-    {BRAND_GUIDELINES}
-
-    Return JSON format:
-    {{
-        "status": "PASS or FAIL",
-        "reasoning": "short explanation",
-        "violations": []
-    }}
-    """
+BRAND GUIDELINES:
+{guidelines}
+"""
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=[
-            types.Part.from_text(text=prompt),
+            final_prompt,
             types.Part.from_bytes(
                 data=image_bytes,
                 mime_type="image/jpeg"
@@ -158,113 +140,211 @@ def brand_check(image_path):
         ]
     )
 
-    return response.text
+    text = response.text.strip()
 
+    try:
+        cleaned = text.replace("```json", "").replace("```", "")
+        return json.loads(cleaned)
 
-def save_cost_log(run_id, variants):
+    except Exception:
 
-    gen_cost = variants * IMAGE_GEN_COST
-    brand_cost = variants * BRAND_CHECK_COST
-    total = gen_cost + brand_cost
-
-    csv_path = BASE_DIR / "cost_log.csv"
-
-    file_exists = csv_path.exists()
-
-    with open(csv_path, "a", newline="") as csvfile:
-
-        writer = csv.writer(csvfile)
-
-        if not file_exists:
-            writer.writerow([
-                "run_id",
-                "variants_generated",
-                "gen_cost_usd",
-                "brand_check_cost_usd",
-                "total_cost_usd"
-            ])
-
-        writer.writerow([
-            run_id,
-            variants,
-            gen_cost,
-            brand_cost,
-            total
-        ])
-
+        return {
+            "pass": False,
+            "score": 0,
+            "violations": ["Invalid JSON response"],
+            "reasoning": text
+        }
 
 # =========================================================
-# MAIN PIPELINE
+# PROCESS SINGLE PRODUCT
 # =========================================================
 
-def run_pipeline():
+def process_product(product_dir):
 
-    TARGET_SKU = "sku_005"
+    print(f"\nProcessing -> {product_dir}")
 
-    product_folders = [
-        folder for folder in PRODUCTS_DIR.iterdir()
-        if folder.is_dir() and folder.name == TARGET_SKU
-    ]
+    product_dir = Path(product_dir)
 
-    for product_folder in product_folders:
+    input_image = product_dir / "input.png"
+    brief_file = product_dir / "brief.json"
 
-        print(f"\nProcessing: {product_folder.name}")
+    with open(brief_file, "r") as f:
+        brief = json.load(f)
 
-        image_path = product_folder / "input.png"
-        brief_path = product_folder / "brief.json"
+    guidelines = read_file(
+        "brand_guidelines.md"
+    )
 
-        brief = load_brief(brief_path)
+    nano_prompt_template = read_file(
+        "prompts/nano_banana_prompt.txt"
+    )
 
-        run_folder = RUNS_DIR / product_folder.name
-        run_folder.mkdir(exist_ok=True)
+    brand_prompt = read_file(
+        "prompts/brand_check_prompt.txt"
+    )
 
-        brand_results = {}
+    product_name = brief["product"]
 
-        for i, variation in enumerate(STYLE_VARIATIONS, start=1):
+    run_dir = product_dir
 
-            print(f"Generating variant {i}")
-            time.sleep(30)
-            prompt = generate_prompt(
-                brief["product"],
-                brief["desired_mood"],
-                brief["desired_background"],
-                variation
-            )
+    # copy brief
+    save_json(
+        run_dir / "brief.json",
+        brief
+    )
 
-            variant_output = run_folder / f"variant_{i}.jpg"
+    brand_results = []
 
-            generate_variant(
-                image_path=image_path,
-                prompt=prompt,
-                output_path=variant_output
-            )
+    # =====================================================
+    # GENERATE 3 VARIANTS
+    # =====================================================
 
-            print(f"Running brand check for variant {i}")
+    for idx, style in enumerate(STYLE_VARIATIONS):
 
-            check_result = brand_check(variant_output)
+        print(f"Generating Variant {idx+1}")
 
-            brand_results[f"variant_{i}"] = check_result
-
-        # Save brand checks
-        brand_check_path = run_folder / "brand_check.json"
-
-        with open(brand_check_path, "w") as file:
-            json.dump(brand_results, file, indent=2)
-
-        # Save cost
-        run_id = str(uuid.uuid4())
-
-        save_cost_log(
-            run_id=run_id,
-            variants=3
+        final_prompt = nano_prompt_template.format(
+            product=brief["product"],
+            desired_mood=f"{brief['desired_mood']} + {style}",
+            desired_background=brief["desired_background"],
+            season=brief["season"],
+            target_audience=brief["target_audience"]
         )
 
-        print(f"Completed: {product_folder.name}")
+        variant_path = run_dir / f"variant_{idx+1}.jpg"
 
+        # save prompt used
+        with open(
+            run_dir / f"variant_{idx+1}_prompt.txt",
+            "w"
+        ) as f:
+            f.write(final_prompt)
+
+        # ================================================
+        # IMAGE GENERATION
+        # ================================================
+
+        generate_image(
+            str(input_image),
+            final_prompt,
+            str(variant_path)
+        )
+
+        # ================================================
+        # BRAND VALIDATION
+        # ================================================
+
+        validation = validate_brand(
+            str(variant_path),
+            guidelines,
+            brand_prompt
+        )
+
+        brand_results.append({
+            "variant": f"variant_{idx+1}.jpg",
+            "validation": validation
+        })
+
+        # ================================================
+        # UPLOAD TO GCS
+        # ================================================
+
+        upload_to_gcs(
+            str(variant_path),
+            f"{product_name}/variant_{idx+1}.jpg"
+        )
+
+    # =====================================================
+    # SAVE BRAND CHECK
+    # =====================================================
+
+    brand_check_path = run_dir / "brand_check.json"
+
+    save_json(
+        brand_check_path,
+        brand_results
+    )
+
+    upload_to_gcs(
+        str(brand_check_path),
+        f"{product_name}/brand_check.json"
+    )
+
+    # =====================================================
+    # COST CALCULATION
+    # =====================================================
+
+    generation_cost = 3 * GEN_COST_PER_IMAGE
+    validation_cost = 3 * BRAND_CHECK_COST
+    total_cost = generation_cost + validation_cost
+
+    return {
+        "run_id": str(uuid.uuid4())[:8],
+        "product": brief["product"],
+        "variants_generated": 3,
+        "gen_cost_usd": round(generation_cost, 4),
+        "brand_check_cost_usd": round(validation_cost, 4),
+        "total_cost_usd": round(total_cost, 4)
+    }
 
 # =========================================================
-# RUN
+# MAIN
 # =========================================================
+
+def main():
+
+    products_root = Path("runs")
+
+    all_costs = []
+
+    for product_folder in products_root.iterdir():
+
+        if product_folder.is_dir():
+
+            try:
+
+                result = process_product("runs/sku_004")
+
+                all_costs.append(result)
+
+                print(f"Completed -> {product_folder.name}")
+
+            except Exception as e:
+
+                print(f"Failed -> {product_folder.name}")
+                print(str(e))
+
+    # =====================================================
+    # SAVE COST LOG
+    # =====================================================
+
+    # =====================================================
+    # SAVE COST LOG
+    # =====================================================
+
+    cost_df = pd.DataFrame(all_costs)
+
+    EXPECTED_COLUMNS = [
+        "run_id",
+        "product",
+        "variants_generated",
+        "gen_cost_usd",
+        "brand_check_cost_usd",
+        "total_cost_usd"
+    ]
+
+    cost_df = cost_df[EXPECTED_COLUMNS]
+
+    cost_df.to_csv(
+        "cost_log.csv",
+        index=False
+    )
+
+    print("\nCost log updated successfully")
+
+    print("\n===================================")
+    print("Creative Pipeline Completed")
+    print("===================================")
 
 if __name__ == "__main__":
-    run_pipeline()
+    main()

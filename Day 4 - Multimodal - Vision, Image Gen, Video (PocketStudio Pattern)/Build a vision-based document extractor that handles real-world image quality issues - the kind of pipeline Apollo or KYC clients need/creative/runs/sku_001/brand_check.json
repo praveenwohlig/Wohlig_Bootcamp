@@ -1,5 +1,31 @@
-{
-  "variant_1": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines, including tone, allowed background colors, absence of prohibited elements, product presentation rules, and photography style. The aesthetic is premium, modern, and aspirational.\",\n    \"violations\": []\n}\n```",
-  "variant_2": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all brand guidelines, including tone, background color, prohibited elements, product presentation rules, and photography style. The background, while featuring warm glowing elements, is predominantly dark, aligning with 'Black' from the allowed background colors. The overall aesthetic is premium, modern, and cinematic, with the product clearly visible and well-lit.\",\n    \"violations\": []\n}\n```",
-  "variant_3": "```json\n{\n    \"status\": \"PASS\",\n    \"reasoning\": \"The image successfully adheres to all specified brand guidelines, including tone, background colors, prohibited elements, product presentation, and photography style. The product is prominently featured in a premium, modern, and aspirational setting with cinematic lighting and clean composition.\",\n    \"violations\": []\n}\n```"
-}
+[
+  {
+    "variant": "variant_1.jpg",
+    "validation": {
+      "pass": true,
+      "score": 92,
+      "violations": [],
+      "reasoning": "The advertisement image successfully aligns with the premium, aspirational, and modern brand tone. The product is clearly visible and undistorted, presented with a luxury commercial aesthetic and cinematic lighting. The composition is clean, with appropriate soft shadows and shallow depth of field, and no prohibited elements are present. The background, while a dark warm tone, complements the overall premium branding and lighting style."
+    }
+  },
+  {
+    "variant": "variant_2.jpg",
+    "validation": {
+      "pass": true,
+      "score": 88,
+      "violations": [
+        "Background color is a dark bronze/brown, which is not explicitly listed in the allowed background colors (Black, White, Warm beige, Soft gray)."
+      ],
+      "reasoning": "The image successfully conveys a premium, modern, and aspirational brand tone, featuring high-quality cinematic lighting, clean composition, and an undistorted product. The logo is visible, and the image is clean and commercially safe. However, the background color deviates from the explicitly allowed palette."
+    }
+  },
+  {
+    "variant": "variant_3.jpg",
+    "validation": {
+      "pass": true,
+      "score": 95,
+      "violations": [],
+      "reasoning": "The advertisement image strongly aligns with the brand's premium, modern, and aspirational tone. It features cinematic lighting, a clean composition, and high product visibility without distortion. The background colors and aesthetic are appropriate for a luxury commercial presentation, fulfilling all specified guidelines."
+    }
+  }
+]

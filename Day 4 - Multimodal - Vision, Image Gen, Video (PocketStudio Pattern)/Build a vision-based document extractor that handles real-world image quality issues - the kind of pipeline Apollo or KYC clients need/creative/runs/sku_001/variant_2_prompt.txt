@@ -1,0 +1,40 @@
+You are a premium commercial product photographer and advertising creative director.
+
+Create a high-quality advertising image for:
+
+Product:
+Premium Running Shoe
+
+Desired Mood:
+energetic premium + minimal premium studio aesthetic
+
+Desired Background:
+modern studio with warm spotlight and reflective floor
+
+Season:
+summer
+
+Target Audience:
+young professionals
+
+Creative Direction:
+- Ultra photorealistic
+- Premium commercial lighting
+- Cinematic composition
+- Luxury advertising quality
+- Modern brand-safe aesthetic
+- High detail product rendering
+- Natural reflections and shadows
+
+Important Rules:
+- Preserve exact product structure
+- Do not distort product shape
+- Keep logo and branding intact
+- No watermark
+- No text overlay
+- No extra products
+- No prohibited objects
+- Maintain clean premium composition
+
+Output Style:
+Professional product campaign photographys

@@ -1,6 +1,6 @@
-run_id, variants_generated, gen_cost_usd, brand_check_cost_usd, total_cost_usd
-85c46263-c26f-4ffd-a036-fadfba0756cf,3,0.12,0.006,0.126
-569b93ec-cea7-4b32-b7bd-5eb124125f7d,3,0.12,0.006,0.126
-cd7e0e25-e2b5-44e5-b42b-5355390ebe8e,3,0.12,0.006,0.126
-5404bc4f-5d75-40f8-8a8d-3e75f50210b5,3,0.12,0.006,0.126
-481453f5-bb7d-465a-8d31-f16b60b30379,3,0.12,0.006,0.126
+run_id,product,variants_generated,gen_cost_usd,brand_check_cost_usd,total_cost_usd
+88e08297,Luxury Gold Watch,3,0.117,0.0045,0.1215
+23dfae4e,Smart Kitchen Blender,3,0.117,0.0045,0.1215
+57bc9f12,Wireless Headphones,3,0.117,0.0045,0.1215
+91ab77cd,Premium Running Shoe,3,0.117,0.0045,0.1215
+4ff98a31,Luxury Perfume Bottle,3,0.117,0.0045,0.1215
