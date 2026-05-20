@@ -161,7 +161,7 @@ if __name__ == "__main__":
     results = search(
 
         question=
-        "FORM OF DECLARATION OF FIDELITY AND SECRECY",
+        "Theory of Richardson-SGD",
 
         top_k=5,
 
